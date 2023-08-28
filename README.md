@@ -7,6 +7,7 @@ Table of Contents:
   - [Problem 1](#problem-1)
   - [Problem 2](#problem-2)
   - [Problem Solutions](#problem-solutions)
+    - [Problem 1](#problem-1-1)
 
 ## Instructions
 Problems can be solved in the language you feel most comfortable with. **These questions evaluate your knowledge of data structures and algorithms to optimize a solution to common problems**. Make sure to understand the question correctly. Validate your assumptions by considering various inputs and outputs. Ensure you understand the time complexity of the solution before writing it, and see if it can be improved.
@@ -59,13 +60,35 @@ Bonus:
 - Write unit tests
 
 ## Problem Solutions
-You can run the following commands to run the server locally:
+You can run the following commands to run the server locally (*you should be at the root of the project*):
 ```bash
+# Install dependencies (this is done once)
 npm install
 
-npm start # Will listen on port 3000 by default
+# By default the server will listen on port 3000 and read the "tests_data/current_test.txt" file as input
+# The content of such file should contain the numbers separated by comma (e.g. "1,2,2,4")
+npm start
+
 # You can change the listening port by prepending the port number
-# PORT=5000 npm start
+# PORT=3000 npm start
+# You can also change the file path by prepending it
+# FILEPATH=tests_data/current_test.txt npm start
+# Or both
+# PORT=3000 FILEPATH=tests_data/current_test.txt npm start
 ```
 
-The server will now be accessible on port 3000.
+The server will now be accessible on port 3000!
+
+To run the unit tests, you can run this command:
+```bash
+npm test
+```
+
+### Problem 1
+For this solution, I iterate the input and look for the missing numbers.
+
+A set was used in order to improve the performance of the algorithm, as it allows to check the presence of a number in O(1) complexity. Now, considering that the space complexity of the problem is at most O(n) when all the numbers are different, I would be iterating through all of them, making the time complexity equal, O(n). In recap, **the time and space complexity are both O(n)**.
+
+In regards to the constraints, there is no problem as these limits are low for what NodeJS can handle and the algorith is already very efficient as well.
+
+You can check the endpoint by going to this link (assuming default settings): http://localhost:3000/api/v1/problems/1
