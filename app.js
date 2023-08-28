@@ -1,9 +1,9 @@
 const express = require('express');
 
-const users = require('./routes/users');
+const problems = require('./routes/problems');
 
 const app = express();
 
-app.use('/api/v1/users', users);
+app.use('/api/v1/problems', problems);
 
 module.exports = app;
