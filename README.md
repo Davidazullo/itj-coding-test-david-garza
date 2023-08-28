@@ -1,6 +1,13 @@
 # Full-Stack Mid Level Coding Test
 **Candidate Name**: David Andrés Garza Medina
 
+Table of Contents:
+- [Full-Stack Mid Level Coding Test](#full-stack-mid-level-coding-test)
+  - [Instructions](#instructions)
+  - [Problem 1](#problem-1)
+  - [Problem 2](#problem-2)
+  - [Problem Solutions](#problem-solutions)
+
 ## Instructions
 Problems can be solved in the language you feel most comfortable with. **These questions evaluate your knowledge of data structures and algorithms to optimize a solution to common problems**. Make sure to understand the question correctly. Validate your assumptions by considering various inputs and outputs. Ensure you understand the time complexity of the solution before writing it, and see if it can be improved.
 
@@ -50,3 +57,15 @@ Bonus:
 - Describe solution
 - Add time and space complexity
 - Write unit tests
+
+## Problem Solutions
+You can run the following commands to run the server locally:
+```bash
+npm install
+
+npm start # Will listen on port 3000 by default
+# You can change the listening port by prepending the port number
+# PORT=5000 npm start
+```
+
+The server will now be accessible on port 3000.
